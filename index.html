@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>X AI Auto Delete</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">PHASE 1</p>
+        <h1>X AI Auto Delete</h1>
+        <p class="subtitle">X OAuth 2.0で自分の投稿を取得・確認・手動削除します。</p>
+      </div>
+      <button id="logoutButton" class="secondary hidden">ログアウト</button>
+    </header>
+
+    <section id="loginPanel" class="card">
+      <h2>Xアカウントを接続</h2>
+      <p>OAuth 2.0でXにログインします。Client Secretやアクセストークンはブラウザには公開しません。</p>
+      <a class="button" href="/auth/x">Xで認証する</a>
+    </section>
+
+    <section id="appPanel" class="hidden">
+      <section class="card profile">
+        <div>
+          <p class="eyebrow">CONNECTED ACCOUNT</p>
+          <h2 id="profileName">読み込み中…</h2>
+          <p id="profileUsername"></p>
+          <p id="profileDescription"></p>
+        </div>
+        <img id="profileImage" alt="X profile" class="avatar hidden">
+      </section>
+
+      <section class="card">
+        <div class="sectionHeader">
+          <div>
+            <p class="eyebrow">YOUR POSTS</p>
+            <h2>投稿一覧</h2>
+          </div>
+          <button id="reloadButton" class="secondary">再読み込み</button>
+        </div>
+        <div id="status" class="status"></div>
+        <div id="posts" class="posts"></div>
+        <button id="loadMoreButton" class="secondary hidden">さらに読み込む</button>
+      </section>
+    </section>
+
+    <footer>AI判定・自動削除はPhase 1では未実装です。</footer>
+  </main>
+  <script src="/app.js" defer></script>
+</body>
+</html>
