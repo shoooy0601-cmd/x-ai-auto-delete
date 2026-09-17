@@ -1,0 +1,19 @@
+{
+  "name": "x-ai-auto-delete",
+  "version": "1.0.0",
+  "private": true,
+  "description": "X AI Auto Delete - Phase 1: OAuth 2.0 PKCE, user profile, own posts, manual deletion.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2"
+  }
+}
